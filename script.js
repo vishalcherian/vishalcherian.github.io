@@ -22,8 +22,24 @@ $(document).ready(function() {
         $(".nav-footer").fadeIn("slow");
         $(".nav-ul").delay(700).fadeIn(400);
     });
+    
+    $(".index-mobile").click(function() {    
+        $(".intro-header").fadeOut(200);
+        $(".intro-footer").fadeOut(200);
+        $(".nav-header").fadeIn("slow");
+        $(".nav-footer").fadeIn("slow");
+        $(".nav-ul").delay(700).fadeIn(400);
+    });
 
     $(".back").click(function() {    
+        $(".nav-header").fadeOut(300);
+        $(".nav-ul").fadeOut(300);
+        $(".nav-footer").fadeOut(300);
+        $(".intro-header").fadeIn("slow");
+        $(".intro-footer").fadeIn("slow");
+    });
+    
+    $(".back-mobile").click(function() {    
         $(".nav-header").fadeOut(300);
         $(".nav-ul").fadeOut(300);
         $(".nav-footer").fadeOut(300);
