@@ -32,6 +32,7 @@ p {
 /*    letter-spacing: 2px;*/
     font-size: .9rem;
     line-height: 150%;
+    text-align: justify;
 }
 
 a {
@@ -367,9 +368,13 @@ li span:hover:after {
 
 /* ================================================   P R O J E C T S  S C R E E N   ======================= */
 
+#about-to-projects {
+    height: 30%;
+    background-image: linear-gradient(white, slateblue); 
+}
 
 #projects-screen {
-    background-color: black;
+    background-image: linear-gradient(slateblue, navy, #001942);
     color: yellow;
 
 }
@@ -402,6 +407,60 @@ li span:hover:after {
     padding-bottom: 1rem;
     color: white;
 }
+
+
+#resume-screen {
+    height: 60%;
+    text-align: left;
+    background-image: linear-gradient(#001942, black);
+/*    background-color: #001942;*/
+    color: deeppink;
+}
+
+#resume-title {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    font-size: 3rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+}
+
+#resume-paragraph {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+#resume-paragraph p {
+    padding-bottom: 1rem;
+    color: white;
+}
+
+#resume-screen .description a {
+    position: absolute;
+    margin-top: 2rem;
+    border: solid;
+    color: deeppink;
+    border-width: 3px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    transition: .2s;
+    left: 10%;
+    top: 12rem;
+}
+
+#resume-screen .description a:hover {
+    color: white;
+    
+}
+
 
 
 /* ================================================   M E D I A   Q U E R I E S   ======================= */
@@ -730,6 +789,57 @@ li span:hover:after {
         padding: 1rem;
         margin-left: 15px;
     
+    }
+    
+    #resume-screen {
+        position: relative;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    #resume-screen .description {
+        position: relative;
+        text-align: center;
+        padding: 0px;
+        left: 0%;
+    }
+    
+    
+    #resume-title {
+        position: relative;
+        display: block;
+        font-size: 2.5rem;
+        font-family: 'Archivo', sans-serif;
+        font-weight: 400;
+        width: 100%;
+        text-align: center;
+        left: 0%;
+        align-content: center;
+        padding-bottom: 0rem;
+        
+    }
+    
+    #resume-screen p {
+        position: relative;
+        display: block;
+        font-size: 1rem;
+        text-align: justify;
+        width: 100%;
+        text-align: center;
+        left: -1rem;
+        top: 4rem;
+        align-content: center;
+        
+    }
+    
+    #resume-screen .description a {
+        position: relative;
+        display: block;
+        margin-left: -4rem;
+        display: inline-block;
+        
+        
+        
     }
     
 }
