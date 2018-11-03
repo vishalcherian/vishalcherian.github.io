@@ -16,8 +16,13 @@
     cursor: crosshair;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: rgb(256, 256, 256);
+    height: 100%;
 }
 
 p {
@@ -406,7 +411,6 @@ li span:hover:after {
     
     .section {
         position: relative;
-        height: 100vh;
         align-content: center;
     }
     
