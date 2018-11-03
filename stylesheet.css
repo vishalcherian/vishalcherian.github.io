@@ -365,6 +365,7 @@ li span:hover:after {
 #projects-screen {
     background-color: black;
     color: yellow;
+
 }
 
 #projects-title {
@@ -499,7 +500,19 @@ li span:hover:after {
 
     
     #about-screen {
-        height: 100vh;
+        
+    }
+    
+    #about-screen .description {
+        border: none;
+    }
+    
+    #projects-screen {
+        
+    }
+    
+    #projects-screen .description {
+        border: none;
     }
     
 }
