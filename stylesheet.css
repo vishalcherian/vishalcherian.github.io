@@ -796,7 +796,7 @@ li span:hover:after {
     #resume-screen {
         position: relative;
         text-align: center;
-        padding: 2rem;
+        padding: 0rem 2rem 2rem 2rem;
     }
     
     #resume-screen .description {
@@ -839,6 +839,7 @@ li span:hover:after {
         display: block;
         margin-left: -4rem;
         display: inline-block;
+        margin-bottom: 20%;
         
         
         
