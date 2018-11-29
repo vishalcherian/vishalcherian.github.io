@@ -360,7 +360,7 @@ li span:hover:after {
     height: 25rem;
     width: 30rem;
     color: black;
-    border-left: 4px solid black;
+    border-left: 2px solid black;
     right: 10%;
     top: 20%;
 }
