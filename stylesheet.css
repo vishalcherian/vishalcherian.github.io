@@ -13,7 +13,6 @@
     font-weight: 500;
     margin: 0;
     padding: 0;
-    cursor: crosshair;
 }
 
 html {
@@ -341,7 +340,7 @@ li span:hover:after {
     top: 0%;
     font-size: 3rem;
     font-family: 'Archivo', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     padding-left: 2rem;
 }
 
@@ -602,7 +601,7 @@ li span:hover:after {
 */
 
 /* Mobile Screen */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     
     #navigation ul {
         position: fixed;
@@ -728,7 +727,7 @@ li span:hover:after {
         top: 0%;
         font-size: 2.5rem;
         font-family: 'Archivo', sans-serif;
-        font-weight: 400;
+        font-weight: 600;
         width: 100%;
         padding: auto;
         margin: auto;
