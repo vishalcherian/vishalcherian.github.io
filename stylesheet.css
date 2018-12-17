@@ -287,6 +287,12 @@ li span:hover:after {
     display: none;
 }
 
+.header .index-mobile:hover {
+        background-color: #ff4800;
+        color: white;
+        border-color: black;
+}
+
 @-webkit-keyframes fade-in-move-up {
   0% {
     opacity: 0;
@@ -340,7 +346,7 @@ li span:hover:after {
     top: 0%;
     font-size: 3rem;
     font-family: 'Archivo', sans-serif;
-    font-weight: 700;
+/*    font-weight: 600;*/
     padding-left: 2rem;
 }
 
@@ -360,9 +366,10 @@ li span:hover:after {
     height: 25rem;
     width: 30rem;
     color: black;
-    border-left: 2px solid black;
+    border-left: 0px solid black;
     right: 10%;
     top: 20%;
+    border-left: 2px solid black;
 }
 
 /* ================================================   P R O J E C T S  S C R E E N   ======================= */
@@ -375,7 +382,7 @@ li span:hover:after {
 */
 
 #projects-screen {
-    background-image: linear-gradient(slateblue, navy, #001942);
+    background-image: linear-gradient(darkblue, navy, #001942);
     color: yellow;
 
 }
@@ -393,7 +400,7 @@ li span:hover:after {
     position: absolute;
     height: 25rem;
     width: 30rem;
-    border-right: 4px solid white;
+    border-right: 2px solid white;
     left: 10%;
     top: 20%;
 }
@@ -424,7 +431,7 @@ li span:hover:after {
     top: 20%;
     font-size: 3rem;
     font-family: 'Archivo', sans-serif;
-    font-weight: 400;
+/*    font-weight: 600;*/
 }
 
 #resume-paragraph {
@@ -439,12 +446,11 @@ li span:hover:after {
 }
 
 #resume-screen .description a {
-    position: absolute;
-    margin-top: 2rem;
+    position: relative;
     border: solid;
     color: deeppink;
-    border-width: 3px;
-    border-radius: 4px;
+    border-width: 2px;
+    border-radius: 3px;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -452,9 +458,12 @@ li span:hover:after {
     font-size: 1rem;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    transition: .2s;
+
+    margin-top: 2rem;
     left: 10%;
     top: 12rem;
+    
+    transition: .2s;
 }
 
 #resume-screen .description a:hover {
@@ -530,12 +539,6 @@ li span:hover:after {
         animation: fadein 1s;
     }
     
-    .header .index:hover {
-        background-color: #ff4800;
-        color: white;
-        border-color: black;
-    }
-    
     .nav-header .back {
         display: none;
     }
@@ -571,6 +574,7 @@ li span:hover:after {
     #about-screen .description {
         border: none;
     }
+    
     
     #projects-screen {
         
@@ -687,7 +691,7 @@ li span:hover:after {
         -webkit-animation: fadein 1s;
         animation: fadein 1s;
     }
-  
+    
     #intro-subtitle {
         position: relative;
         width: 100%;
@@ -727,7 +731,7 @@ li span:hover:after {
         top: 0%;
         font-size: 2.5rem;
         font-family: 'Archivo', sans-serif;
-        font-weight: 600;
+/*        font-weight: 600;*/
         width: 100%;
         padding: auto;
         margin: auto;
@@ -761,7 +765,6 @@ li span:hover:after {
         display: block;
         text-align: center;
         width: 100%;
-        height: 40%;
         right: auto;
         left: auto;
         border: none;
@@ -773,7 +776,7 @@ li span:hover:after {
         top: 0%;
         font-size: 2.5rem;
         font-family: 'Archivo', sans-serif;
-        font-weight: 400;
+/*        font-weight: 600;*/
         width: 100%;
         padding: auto;
         margin: auto;
@@ -796,13 +799,17 @@ li span:hover:after {
         position: relative;
         text-align: center;
         padding: 0rem 2rem 2rem 2rem;
+        height: 100%;
     }
     
     #resume-screen .description {
+        display: flex;
         position: relative;
+        justify-content: center;
         text-align: center;
         padding: 0px;
         left: 0%;
+        top: 30%;
     }
     
     
@@ -811,7 +818,7 @@ li span:hover:after {
         display: block;
         font-size: 2.5rem;
         font-family: 'Archivo', sans-serif;
-        font-weight: 400;
+/*        font-weight: 600;*/
         width: 100%;
         text-align: center;
         left: 0%;
@@ -834,14 +841,9 @@ li span:hover:after {
     }
     
     #resume-screen .description a {
-        position: relative;
-        display: block;
-        margin-left: -4rem;
-        display: inline-block;
-        margin-bottom: 20%;
-        
-        
-        
-    }
-    
+        position: relative; 
+        text-align: center;
+        left: 0%;
+        top: 10rem;
+    } 
 }

@@ -45,6 +45,9 @@ window.onscroll = function(e) {
         //change index to inverted version
         index.style.color = 'white';
         indexMobile.style.color = 'white';
+        //Change the hover effect at darkness
+        
+        
         change = true;
     } else if (change && (offset <= stickPoint)){
         //if current logo/index are black background version
@@ -94,5 +97,6 @@ $(document).ready(function() {
         $(".intro-header").fadeIn("slow");
         $(".intro-footer").fadeIn("slow");
     });
+    
 });
 
