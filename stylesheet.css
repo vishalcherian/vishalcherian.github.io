@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo:200,400,700|Barlow:400,600|Rubik:300,400|Crete+Round:400i');
+@import url('https://fonts.googleapis.com/css?family=Archivo:200,400,700|Barlow:400,600|Rubik:300,400|Rakkas:400');
 
 /* ====== COLORS ====== */
 /* RED-ORANGE: #ff4800 */
@@ -26,10 +26,10 @@ body {
 
 p {
     font-family: 'Rubik', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: rgb(125, 125, 125);
 /*    letter-spacing: 2px;*/
-    font-size: .9rem;
+    font-size: 1rem;
     line-height: 150%;
     text-align: justify;
 }
@@ -40,12 +40,30 @@ a {
     cursor: pointer;
 }
 
-.section {
+section {
     position: relative;
     overflow: hidden;
     height: 100%;
 }
 
+.description {
+/*
+    opacity: 0;
+    transform: translate(0, 20px);
+*/
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+
+.description .visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+::selection {
+    background: black;
+    color: white;
+}
 
 /* ================================================   N A V   ======================= */
 
@@ -94,9 +112,9 @@ a {
 }
     
 .nav-header .back:hover {
-    background-color: white;
-    border-color: black;
-    color: black;
+    background-color: deeppink;
+    border-color: deeppink;
+    color: white;
 }
 
 #navigation {
@@ -104,7 +122,7 @@ a {
     width: 0%;
     position: fixed;
     z-index: 10;
-    background: #ff4800;
+    background: black;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     top: 0;
@@ -143,7 +161,7 @@ a {
 }
 
 #navigation li span:hover {
-    color: black;
+    color: deeppink;
 }
 
 li span:before, li span:after {
@@ -166,7 +184,7 @@ li span:after {
 }
 
 li span:hover:before {
-  background: black;
+  background: deeppink;
   width: 100%;
   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -278,7 +296,7 @@ li span:hover:after {
 }
 
 .header .index:hover {
-    background-color: #ff4800;
+    background-color: deeppink;
     color: white;
     border-color: black;
 }
@@ -288,7 +306,7 @@ li span:hover:after {
 }
 
 .header .index-mobile:hover {
-        background-color: #ff4800;
+        background-color: deeppink;
         color: white;
         border-color: black;
 }
@@ -339,9 +357,14 @@ li span:hover:after {
 
 #about-screen {
     background-color: white;
+    height: 110vh;
+    -webkit-filter: grayscale(10%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(10%);
+    
 }
 
 #about-title {
+    color: black;
     position: absolute;
     top: 0%;
     font-size: 3rem;
@@ -359,17 +382,48 @@ li span:hover:after {
 
 #about-paragraph p {
     padding-bottom: 1rem;
+    color: black;
 }
 
 #about-screen .description {
     position: absolute;
     height: 25rem;
     width: 30rem;
-    color: black;
-    border-left: 0px solid black;
     right: 10%;
-    top: 20%;
-    border-left: 2px solid black;
+    top: 17%;
+    border-left: 0px solid white;
+}
+
+/* ================================================   Q U O T E  S C R E E N   ======================= */
+#quote-screen {
+    height: 110vh;
+    position: relative;
+    display: block;
+    background-image: url("SnowyMountain.jpg");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#quote-screen h2 {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    top: 50%;
+    width: 100%;
+/*    text-transform: uppercase;*/
+    font-size: 5rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    color: white;
+    transform: translateY(-50%);
+}
+
+#quote-screen h2 span {
+    color: deeppink;
 }
 
 /* ================================================   P R O J E C T S  S C R E E N   ======================= */
@@ -382,8 +436,10 @@ li span:hover:after {
 */
 
 #projects-screen {
-    background-image: linear-gradient(darkblue, navy, #001942);
-    color: yellow;
+/*    background-image: linear-gradient(darkblue, navy, #001942);*/
+    height: 120vh;
+    background-color: #2E455E;
+    color: white;
 
 }
 
@@ -400,9 +456,9 @@ li span:hover:after {
     position: absolute;
     height: 25rem;
     width: 30rem;
-    border-right: 2px solid white;
+    border-right: 0px solid white;
     left: 10%;
-    top: 20%;
+    top: 17%;
 }
 
 #projects-paragraph {
@@ -420,33 +476,51 @@ li span:hover:after {
 #resume-screen {
     height: 60%;
     text-align: left;
-    background-image: linear-gradient(#001942, black);
+    background-color: #2E455E;
+/*    background-image: linear-gradient(#001942, black);*/
 /*    background-color: #001942;*/
     color: deeppink;
+
 }
 
 #resume-title {
-    position: absolute;
+    position: relative;
+    display:  block;
+/*
     left: 10%;
     top: 20%;
+*/
+    margin-top: 6rem;
+    margin-bottom: -3.5rem;
     font-size: 3rem;
     font-family: 'Archivo', sans-serif;
 /*    font-weight: 600;*/
 }
 
 #resume-paragraph {
-    position: absolute;
-    top: 40%;
-    left: 10%;
+    position: relative;
+    text-align: center;
+    align-content: center;
+    display: block;
 }
 
 #resume-paragraph p {
-    padding-bottom: 1rem;
+    padding: 1rem; 1rem;
+    margin-top: 4rem;
+    margin-bottom: -2rem;;
+    text-align: center;
     color: white;
+}
+#resume-screen .description {
+        position: relative;
+        text-align: center;
+    
+        padding: 0rem 2rem 2rem 2rem;
 }
 
 #resume-screen .description a {
     position: relative;
+    display: block;
     border: solid;
     color: deeppink;
     border-width: 2px;
@@ -459,11 +533,11 @@ li span:hover:after {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
 
-    margin-top: 2rem;
-    left: 10%;
-    top: 12rem;
+    text-align: center;
+    left: 0%;
+    top: 3rem;
     
-    transition: .2s;
+    -webkit-transition: .2s;
 }
 
 #resume-screen .description a:hover {
@@ -575,6 +649,15 @@ li span:hover:after {
         border: none;
     }
     
+    #quote-screen {
+        background-position: left;
+        text-align: center;
+    }
+    
+    #quote-screen h2 {
+        font-size: 4rem;
+    }
+    
     
     #projects-screen {
         
@@ -641,8 +724,8 @@ li span:hover:after {
     }
     
     .nav-header .back-mobile:hover {
-        background-color: white;
-        border-color: black;
+        background-color: deeppink;
+        border-color: deeppink;
         color: black;
     }
 
@@ -709,7 +792,7 @@ li span:hover:after {
         position: relative;
         text-align: center;
         align-content: center;
-        height: 110vh;
+        height: 150vh;
         padding: auto;
     }
     
@@ -749,13 +832,27 @@ li span:hover:after {
         margin-left: -15px;
     }
     
+    /* QUOTE SCREEN */
+    #quote-screen {
+        background-position: left;
+        text-align: center;
+    }
+    
+    #quote-screen h2 {
+        position: relative;
+        left: 5%;
+        font-size: 3rem;
+        width: 100%;
+        width: 90%;
+    }
+    
     /* PROJECTS SCREEN */
     
     #projects-screen {
         position: relative;
         text-align: center;
         align-content: center;
-        height: 105vh;
+        height: 150vh;
         padding: auto;
     }
     
@@ -803,47 +900,30 @@ li span:hover:after {
     }
     
     #resume-screen .description {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        text-align: center;
-        padding: 0px;
-        left: 0%;
-        top: 30%;
+
     }
     
     
     #resume-title {
-        position: absolute;
-        display: block;
+        top: 9rem;
         font-size: 2.5rem;
-        font-family: 'Archivo', sans-serif;
-/*        font-weight: 600;*/
-        width: 100%;
-        text-align: center;
-        left: 0%;
-        align-content: center;
-        padding-bottom: 0rem;
+        padding: 0rem;
+        margin-bottom: .5rem;
         
     }
     
-    #resume-screen p {
-        position: relative;
-        display: block;
-        font-size: 1rem;
-        text-align: justify;
-        width: 100%;
-        text-align: center;
-        left: -1rem;
-        top: 4rem;
-        align-content: center;
+    #resume-paragraph {
+        top: 7rem;
+        padding: 0px;
+        margin: 1rem 0rem;
         
+    }
+    
+    #resume-paragraph p {
+        padding: 0px;
     }
     
     #resume-screen .description a {
-        position: relative; 
-        text-align: center;
-        left: 0%;
-        top: 10rem;
+        top: 9.5rem;
     } 
 }

@@ -13,8 +13,11 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-//project screen
-var projects = document.getElementById("projects-screen");
+//about screen
+var quote = document.getElementById("quote-screen");
+
+//about description
+var aboutDescription = document.querySelectorAll("#about-screen .description");
 
 //logos 
 var lightLogo = document.getElementById("light-screen");
@@ -25,11 +28,11 @@ var index = document.querySelector("#desktopIndex");
 var indexMobile = document.querySelector("#mobileIndex");
 var change = false; //for determining when to change 
 
-//distance of projects screen to the top
+//distance of about screen to the top
 var stickPoint = getDistance();
 
 function getDistance() {
-  var topDist = projects.offsetTop;
+  var topDist = quote.offsetTop;
   return topDist;
 }
 
@@ -45,7 +48,6 @@ window.onscroll = function(e) {
         //change index to inverted version
         index.style.color = 'white';
         indexMobile.style.color = 'white';
-        //Change the hover effect at darkness
         
         
         change = true;
@@ -57,6 +59,7 @@ window.onscroll = function(e) {
         //change index to inverted version
         index.style.color = 'black';
         indexMobile.style.color = 'black';
+        
         change = false;
     }
 }
@@ -64,6 +67,7 @@ window.onscroll = function(e) {
 
 
 // all custom jQuery will go here
+
 $(document).ready(function() {
     
     $(".index").click(function() {    
